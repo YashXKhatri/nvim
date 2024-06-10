@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("yash.plugins", {
+require("lazy").setup({ { import = "yash.plugins" }, { import = "yash.plugins.lsp" } }, {
   checker = {
     enable = true,
     notify = false,
